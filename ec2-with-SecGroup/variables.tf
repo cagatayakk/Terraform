@@ -3,7 +3,7 @@ variable "ami" {
 }
 
 variable "instance_type" {
-  default  = "t2.micro"
+  default  = "t1.micro"
 }
 
 variable "key_name" {
