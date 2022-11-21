@@ -1,9 +1,9 @@
 variable "private_key" {
-  default = "My_Key.pem"
+  default = "First_Key.pem"
 }
 
 variable "key_name" {
-  default = "My_Key"
+  default = "First_Key"
 }
 
 variable "vpc_cidr" {
