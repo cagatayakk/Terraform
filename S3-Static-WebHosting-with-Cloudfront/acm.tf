@@ -1,5 +1,6 @@
 data "aws_acm_certificate" "ssl-certificate" {
   domain   = var.domain-name
+  statuses = ["ISSUED"]
 }
 
 resource "aws_acm_certificate_validation" "cert_validation" {
