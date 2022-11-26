@@ -1,22 +1,4 @@
-# Hands-on Terraform-04 : Terraform Modules and import.
-
-Purpose of the this hands-on training is to give students the knowledge of terraform modules and import in Terraform.
-
-## Learning Outcomes
-
-At the end of the this hands-on training, students will be able to;
-
-- Use Terraform modules.
-
-- Use Terraform import.
-
-## Outline
-
-- Part 1 - Terraform Modules
-
-- Part 2 - Terraform Import
-
-## Part 1 - Terraform Modules
+## Terraform Modules
 
 - A module is a container for multiple resources that are used together.
 
@@ -78,7 +60,7 @@ resource "aws_subnet" "private_subnet" {
 
 ```go
 variable "environment" {
-  default = "clarusway"
+  default = "cagatayakk"
 }
 
 variable "vpc_cidr_block" {
