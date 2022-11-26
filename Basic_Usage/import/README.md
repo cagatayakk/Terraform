@@ -1,5 +1,3 @@
-
-
 ##  Terraform Import
 
 - Terraform is able to import existing infrastructure. 
@@ -60,7 +58,7 @@ resource "aws_instance" "tf-instances" {
   ami = element(var.tf-ami, count.index )
   instance_type = "t2.micro"
   count = 3
-  key_name = "clarusway"
+  key_name = "First_Key"
   security_groups = ["tf-import-sg"]
   tags = {
     Name = element(var.tf-tags, count.index )
