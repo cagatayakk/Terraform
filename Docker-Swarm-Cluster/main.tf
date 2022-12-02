@@ -101,7 +101,7 @@ variable "instancetype" {
 }
 
 variable "mykey" {
-  default = "clarusway"
+  default = "First_Key"
 }
 
 resource "aws_instance" "docker-machine-leader-manager" {
