@@ -32,7 +32,7 @@ resource "null_resource" "forpasswd" {
   depends_on = [aws_instance.tf-jenkins-server]
 
   provisioner "local-exec" {
-    command = "sleep 3m"
+    command = "sleep 180"
   }
 
   # Do not forget to define your key file path correctly!
