@@ -7,6 +7,6 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "First_Key"
+  default = "cagatayakk"
 }
 
