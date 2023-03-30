@@ -8,5 +8,4 @@ amazon-linux-extras install epel -y
 yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
-systemctl status jenkins
 yum install git -y
