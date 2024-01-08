@@ -57,7 +57,7 @@ data "template_file" "manager" {
     yum install python3 -y
     amazon-linux-extras install epel -y
     yum install python-pip -y
-    pip install ec2instanceconnectcli
+    pip3 install ec2instanceconnectcli
     aws ec2 wait instance-status-ok --instance-ids ${aws_instance.docker-machine-leader-manager.id}
     eval "$(mssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  \
     --region ${data.aws_region.current.name} ${aws_instance.docker-machine-leader-manager.id} docker swarm join-token manager | grep -i 'docker')"
@@ -84,7 +84,7 @@ data "template_file" "worker" {
     yum install python3 -y
     amazon-linux-extras install epel -y
     yum install python-pip -y
-    pip install ec2instanceconnectcli
+    pip3 install ec2instanceconnectcli
     aws ec2 wait instance-status-ok --instance-ids ${aws_instance.docker-machine-leader-manager.id}
     eval "$(mssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  \
      --region ${data.aws_region.current.name} ${aws_instance.docker-machine-leader-manager.id} docker swarm join-token worker | grep -i 'docker')"
@@ -93,7 +93,7 @@ data "template_file" "worker" {
 }
 
 variable "myami" {
-  default = "ami-05fa00d4c63e32376"
+  default = "ami-00b8917ae86a424c9"
 }
 
 variable "instancetype" {
