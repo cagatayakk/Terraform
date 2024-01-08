@@ -32,7 +32,7 @@ resource "null_resource" "forpasswd" {
   depends_on = [aws_instance.tf-jenkins-server]
 
   provisioner "local-exec" {
-    command = "sleep 180"
+    command = " aws ec2 wait instance-status-ok --instance-ids ${aws_instance.tf-jenkins-server.id} "
   }
 
   # Do not forget to define your key file path correctly!
