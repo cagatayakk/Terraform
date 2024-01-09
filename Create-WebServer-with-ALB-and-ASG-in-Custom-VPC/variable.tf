@@ -1,9 +1,9 @@
 variable "private_key" {
-  default = "First_Key.pem"
+  default = "cagatayakk.pem"
 }
 
 variable "key_name" {
-  default = "First_Key"
+  default = "cagatayakk"
 }
 
 variable "vpc_cidr" {
